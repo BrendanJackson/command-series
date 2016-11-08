@@ -1,15 +1,15 @@
 #! /usr/bin/env php
-
+//L4
 <?php
 //Documentation @ http://symfony.com/doc/current/console.html
 
-use Acme\SayHelloCommand;
+use Acme\NewCommand;
 use Symfony\Component\Console\Application;
 
 require ('vendor/autoload.php');
 
 $App = new Application("Command Line App DEMO", "1.0");
 
-$App->add(new SayHelloCommand);
+$App->add(new NewCommand(new GuzzleHttp\Client));
 
 $App->run();
